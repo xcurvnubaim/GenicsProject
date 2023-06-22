@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="./index.js"></script>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="">
+      <div class="flex justify-center">
+        <div
+          class="mt-5 relative flex flex-col rounded-xl bg-clip-border shadow-none border-4 border-light-2 bg-light-6 w-80 lg:w-[600px]"
+        >
+          <h4 class="mt-3 font-sans text-2xl font-bold justify-center flex">
+            To do list
+          </h4>
+          <div class="mx-5 mt-5 mb-2 min-w-[200px]">
+            <div class="mb-4 flex flex-col gap-6">
+              <div class="relative h-11">
+                <input
+                  id="title"
+                  type="text"
+                  class="px-3 font-sans bg-white border shadow-sm border-light-4 focus:outline-none focus:border-light-2 focus:ring-light-2 block h-full w-full rounded-md sm:text-sm focus:ring-1"
+                  placeholder="Tittle"
+                />
+              </div>
+            </div>
+            <button
+              class="block w-full py-2 bg-light-2 rounded-md text-white font-sans font-bold hover:shadow-gray-400 hover:shadow-lg"
+              onclick="add()"
+            >
+              Add
+            </button>
+          </div>
+
+          <div
+            class="mt-6 mx-5 flex justify-center h-full bg-light-2 rounded-md font-bold border text-white"
+          >
+            To Do List
+          </div>
+          <div class="mx-5 mt-0 mb-5  ">
+            <ul class="font-sans cursor-pointer " id="ToDoList">
+              <li
+                class="relative uncheck py-3 hover:bg-slate-300 pl-5 rounded-lg "
+                onclick="checkList(event)"
+              >
+                HIt the gym
+                <span
+                  class="absolute right-5 hover:bg-red-400 px-5"
+                  onclick="hideList(event)"
+                  >X</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
