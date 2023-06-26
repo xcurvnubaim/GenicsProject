@@ -13,7 +13,7 @@ function hideList(ev) {
 function add() {
     let title = document.getElementById("title");
     let text = title.value;
-    if (text != "") {
+    if (text != "" && text.length <=20) {
         let li = document.createElement("li");
         let toDoList = document.getElementById("ToDoList");
         li.className =
@@ -28,8 +28,16 @@ function add() {
         li.appendChild(span);
 
         toDoList.appendChild(li);
-    } else {
+    } else if(text.length==0) {
         alert("Ga boleh kosong");
+    } else {
+        alert("Maksimum 20 karakter")
     }
     title.value = "";
+}
+
+function changeMode(){
+    let ht = document.getElementById('html');
+    ht.classList.toggle('dark');
+    // console.log(ht);
 }
